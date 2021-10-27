@@ -29,8 +29,8 @@ vec2 f (vec2 x) { // f(x) where x is a complex number
     vec2 oc = ComplexProduct(qu,qu); // x^8
 
     return ComplexProduct(oc, sq) - vec2(1,0); // 1.] x^10 - 1
-    return ComplexProduct(oc) - vec2(1,0); // 2.] x^8 - 1
-    return ComplexProduct(qu) - vec2(1,0); // 3.] x^4 - 1
+    // return oc - vec2(1,0); // 2.] x^8 - 1
+    // return qu - vec2(1,0); // 3.] x^4 - 1
 }   
 
 vec2 df (vec2 x) { //f'(x) where x is a complex number
@@ -40,8 +40,8 @@ vec2 df (vec2 x) { //f'(x) where x is a complex number
     vec2 oc = ComplexProduct(qu,qu); // x^8
 
     return ComplexProduct(vec2(10,0), ComplexProduct(oc, x)); // derivative of 1.]
-    return ComplexProduct(vec2(8,0), ComplexProduct(qu, tri)); // derivative of 2.]
-    return ComplexProduct(vec2(4,0), tri); // derivative of 3.]
+    // return ComplexProduct(vec2(8,0), ComplexProduct(qu, tri)); // derivative of 2.]
+    // return ComplexProduct(vec2(4,0), tri); // derivative of 3.]
 }
 
 vec2 newton (float x, float y) { //newton method (https://en.wikipedia.org/wiki/Newton%27s_method)
